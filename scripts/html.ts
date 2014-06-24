@@ -10,6 +10,8 @@ $("/html") {
 
   remove_all_styles()
 
+  insert_mobile_meta_tags()
+
 
   @import "sections/header.ts"
   @import "base.ts"
