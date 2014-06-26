@@ -7,7 +7,7 @@ $('./body') {
     remove("./@align")
     add_class("mw-header")
 
-    insert_top("img", src: asset("images/logo.jpg"))
+    insert_top("img", src: asset("images/logo.svg"), class: "logo")
 
     insert_top("a", href: "javascript:void(0)", data-ur-toggler-component: "button", id: "menu-button", class: "myicons button icon-menu")
 
