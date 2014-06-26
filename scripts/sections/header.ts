@@ -9,7 +9,7 @@ $('./body') {
 
     insert_top("img", src: asset("images/logo.jpg"))
 
-    insert_top("a", "menu", href: "#!", data-ur-toggler-component: "button")
+    insert_top("a", href: "javascript:void(0)", data-ur-toggler-component: "button", id: "menu-button", class: "myicons button icon-menu")
 
     remove("./script")
     $("./noscript") {

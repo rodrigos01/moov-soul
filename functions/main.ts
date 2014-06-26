@@ -94,7 +94,7 @@
 #
 #
 # EXAMPLE::
-# 
+#
 # table_dump(".//table") {
 #   $("./div[@class='some-class']") {
 #     add_class("mw-more-scopes")
@@ -211,7 +211,7 @@
 @func XMLNode.add_mobile_stylesheet() {
   $("/html/head") {
     insert("link", rel: "stylesheet", type: "text/css", href: sass($device_stylesheet), data-mw-keep: "true")
-  }  
+  }
 }
 
 # Add the mobile javascript
@@ -232,12 +232,21 @@
   }
 }
 
+# Add external resources on the head
+@func XMLNode.add_external_css () {
+  $("/html/head") {
+    insert_bottom("link", href: "https://fontastic.s3.amazonaws.com/FJs86axbrvu5DiX6GNVoQd/icons.css", rel: "stylesheet", data-mw-keep: "true")
+  }
+}
+
 # Add in our Assets
 @func XMLNode.add_assets() {
   add_favicon()
   add_apple_touch_icons()
   add_mobile_stylesheet()
   add_mobile_javascript()
+
+  add_external_css()
 }
 
 @func Text.inferred_content_type() {

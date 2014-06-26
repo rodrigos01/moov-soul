@@ -8,7 +8,7 @@ match(inferred_content_type()) {
 
     # Force UTF-8 encoding. If you'd like to auto-detect the encoding,
     # simply remove the "UTF-8" argument.  e.g. html(){ ... }
-    html("UTF-8") {
+    html() {
       @import "html.ts"
     }
 
@@ -16,7 +16,7 @@ match(inferred_content_type()) {
 
     restore_dollar_sign()
   }
-  
+
   else() {
     log("Passing through " + $content_type + " unmodified.")
   }
